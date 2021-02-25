@@ -23,6 +23,7 @@ proxy_secret_name: "migration-proxy"
 http_proxy: "{{ lookup( 'env', 'HTTP_PROXY') }}"
 https_proxy: "{{ lookup( 'env', 'HTTPS_PROXY') }}"
 no_proxy: "{{ lookup( 'env', 'NO_PROXY') }}"
+tcp_proxy: ""
 image_pull_policy: Always
 cluster_subdomain: ""
 rsync_transfer_image: "{{ registry }}/{{ project }}/{{ rsync_transfer_repo }}"
