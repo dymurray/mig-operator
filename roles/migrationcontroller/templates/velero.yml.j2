@@ -4,6 +4,10 @@ metadata:
   name: velero
   namespace: "{{ mig_namespace }}"
 spec:
+{% if unsupported_override_velero_image_fqin is defined %}
+  unsupportedOverrides:
+    veleroImageFqin: {{ unsupported_override_velero_image_fqin }}
+{% endif %}
   configuration:
     velero:
       defaultPlugins:
